@@ -73,3 +73,13 @@ def do_deploy(archive_path):
         return True
 
     return False
+
+
+
+def deploy():
+
+    new_archive = do_pack()
+    if new_archive is None:
+        return False
+
+    return do_deploy(new_archive)
