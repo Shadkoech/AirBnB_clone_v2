@@ -45,14 +45,13 @@ def do_deploy(archive_path):
         r_folder = archive.split('.')[0]
         rd_path = "/data/web_static/releases/{}/".format(r_folder)
 
-
         # Uploading the archive into the web server
         put(archive_path, ra_path)
 
         # Creating deployement folder on ws
         run("mkdir -p {}".format(rd_path))
 
-        # Extracting the archive contents 
+        # Extracting the archive contents
         run("tar -xzf {} -C {}".format(ra_path, rd_path))
 
         # Removing the no longer needed uploaded archive
@@ -73,7 +72,6 @@ def do_deploy(archive_path):
         return True
 
     return False
-
 
 
 def deploy():
