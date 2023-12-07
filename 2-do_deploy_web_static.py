@@ -9,6 +9,7 @@ from datetime import datetime
 
 env.hosts = ['54.152.59.218', '3.84.255.77']
 env.user = 'ubuntu'
+env.key_file_name = "~/.ssh/school"
 
 
 def do_pack():
@@ -45,14 +46,13 @@ def do_deploy(archive_path):
         r_folder = archive.split('.')[0]
         rd_path = "/data/web_static/releases/{}/".format(r_folder)
 
-
         # Uploading the archive into the web server
         put(archive_path, ra_path)
 
         # Creating deployement folder on ws
         run("mkdir -p {}".format(rd_path))
 
-        # Extracting the archive contents 
+        # Extracting the archive contents
         run("tar -xzf {} -C {}".format(ra_path, rd_path))
 
         # Removing the no longer needed uploaded archive
@@ -67,7 +67,7 @@ def do_deploy(archive_path):
         # Removing existing symbolic links
         run("rm -rf /data/web_static/current")
 
-        # Creating a new symbolic link to the laterst version of code
+        # Creating a new symbolic link to the latest version of code
         run("ln -s {} /data/web_static/current".format(rd_path))
 
         return True
