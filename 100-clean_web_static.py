@@ -88,6 +88,7 @@ def deploy():
 def do_clean(number=0):
     """Deletes all out of date archives """
 
+    #deleting unnecessary archives in the local machine
     files = local("ls -1t versions", capture=True)
     file_names = files.split("\n")
     n = int(number)
@@ -97,6 +98,7 @@ def do_clean(number=0):
     for i in file_names[n:]:
         local("rm versions/{}".format(i))
 
+    # Deleting unnecessary archives in the server
     dir_server = run("ls -1t /data/web_static/releases")
     dir_server_names = dir_server.split("\n")
 
