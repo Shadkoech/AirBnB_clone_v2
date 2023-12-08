@@ -75,7 +75,7 @@ def do_deploy(archive_path):
 
 
 def deploy():
-    """reates and distributes an archive to your web servers, 
+    """reates and distributes an archive to your web servers,
     using the function deploy"""
 
     new_archive = do_pack()
