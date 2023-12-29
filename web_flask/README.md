@@ -8,8 +8,8 @@ The tasks below orchestrates the process of building a web app using python flas
 ## Task 0: Hello Flask!
 
 Files:
-	- 0-hello_route.py, __init__.py
 
+	- 0-hello_route.py, __init__.py
 Script that starts a Flask web application:
 * Your web application must be listening on 0.0.0.0, port 5000
 * Routes:
@@ -21,8 +21,8 @@ Script that starts a Flask web application:
 ## Task 1: HBNB
 
 File:
-	- 1-hbnb_route.py
 
+	- 1-hbnb_route.py
 Script that starts a Flask web application:
 * Your web application must be listening on 0.0.0.0, port 5000
 * Routes:
@@ -35,8 +35,8 @@ Script that starts a Flask web application:
 ## Task 2: C is fun!
 
 File:
-	- 2-c_route.py
 
+	- 2-c_route.py
 Script that starts a Flask web application:
 * Your web application must be listening on 0.0.0.0, port 5000
 * Routes:
@@ -50,8 +50,8 @@ Script that starts a Flask web application:
 ## Task 3: Python is cool!
 
 File:
-	- 3-python_route.py
 
+	- 3-python_route.py
 A script that starts a Flask web application:
 * Your web application must be listening on 0.0.0.0, port 5000
 * Routes:
@@ -67,8 +67,8 @@ A script that starts a Flask web application:
 ## Task 4: Is it a number?
 
 File:
-	- 4-number_route.py
 
+	- 4-number_route.py
 A script that starts a Flask web application:
 * Your web application must be listening on 0.0.0.0, port 5000
 * Routes:
@@ -85,10 +85,9 @@ The default value of text is “is cool”
 ## Task 5:Number template
 
 File:
+
 	- 5-number_template.py, templates/5-number.html
-
 A script that starts a Flask web application:
-
 * Your web application must be listening on 0.0.0.0, port 5000
 * Routes:
 	- /: display “Hello HBNB!”
