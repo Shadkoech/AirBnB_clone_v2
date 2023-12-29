@@ -6,6 +6,7 @@ routes:
     /: display “Hello HBNB!”
     /hbnb: display “HBNB”
     /c/<text>: display “C ” followed by the value of <text> variable
+    /python/<text>: display "Python followed by value of text variable
 """
 
 from flask import Flask
@@ -30,12 +31,20 @@ def hbnb():
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def c_is_fun(text):
+def c_isfun(text):
     """Route handler for the path /c/<text>
     Displays C followed by text variable
     """
-    text = text.replace("_", "")
-    return "C " + text
+    return "C {}".format(text.replace("_", " "))
+
+
+@app.route("/python", strict_slashes=False)
+@app.route("/python/<text>", strict_slashes=False)
+def python(text="is cool"):
+    """Route handler for /python with and without text
+    Displays Python followed by text
+    """
+    return "Python {}".format(text.replace("_", " "))
 
 
 if __name__ == "__main__":
