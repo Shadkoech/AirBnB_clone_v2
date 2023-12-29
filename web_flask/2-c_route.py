@@ -34,8 +34,8 @@ def c_is_fun(text):
     """Route handler for the path /c/<text>
     Displays C followed by text variable
     """
-    text = text.replace("_", "")
-    return "C " + text
+    text_var = text.replace("_", "")
+    return "C " + text_var
 
 
 if __name__ == "__main__":
