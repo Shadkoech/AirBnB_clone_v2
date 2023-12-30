@@ -45,10 +45,7 @@ class DBStorage:
         obj_dict = {}
 
         if cls:
-            if isinstance(cls, str):
-                cls = all_classes.get(cls, None)
-            elif isinstance(cls, type):
-                cls = cls
+            cls = all_classes[cls]
 
         if cls:
             for row in self.__session.query(cls).all():
