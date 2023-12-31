@@ -25,9 +25,10 @@ class State(BaseModel, Base):
             """Method that returns the list of City instances
             with state_id equals to the current State.id
             """
+            from models import storage
             cities = []
 
-            for city in list(models.storage.all(City).values()):
+            for city in list(storage.all(City).values()):
                 if city.state_id == self.id:
                     cities.append(city)
             return cities
