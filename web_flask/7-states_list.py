@@ -14,6 +14,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.teardown_appcontext
 def close_db(error):
     """Closes and removes the running SQLAlchemy session
